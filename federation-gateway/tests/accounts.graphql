@@ -1,22 +1,9 @@
-const { buildSchema } = require('graphql');
+extend type Query {
+  me: User
+}
 
-const Post = `
-  type Post {
-    id: ID
-    title: String @deprecated(reason: "No more used")
-    createdAt: String
-    modifiedAt: String
-  }  
-`;
-
-const Query = `
-  type Query {
-    post: Post!
-    posts: [Post!]
-  }
-`;
-
-module.exports = buildSchema(`
-  ${Post}
-  ${Query}
-`);
+type User @key(fields: "id") {
+  id: ID!
+  name: String
+  username: String
+}
