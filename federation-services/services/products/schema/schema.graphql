@@ -1,0 +1,15 @@
+extend type Query {
+    topProducts(first: Int = 5): [Product]
+}
+
+extend type Mutation{
+    createProduct(upc:String,name:String,price:Int,weight:Int):String
+}
+
+type Product @key(fields: "upc") {
+    upc: String!
+    name: String
+    price: Int
+    weight: Int
+    code:String
+}

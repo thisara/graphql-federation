@@ -1,0 +1,24 @@
+{
+  "name": "federation-demo",
+  "main": "gateway.js",
+  "type": "module",
+  "scripts": {
+    "start-gateway": "nodemon gateway.js",
+    "start-services": "concurrently \"npm:start-service-*\""
+  },
+  "devDependencies": {
+    "nodemon": "latest",
+    "concurrently": "latest"
+  },
+  "dependencies": {
+    "@apollo/gateway": "latest",
+    "@graphql-tools/graphql-file-loader": "^6.2.7",
+    "@graphql-tools/load": "^6.2.8",
+    "apollo-server": "latest",
+    "express": "^4.17.1",
+    "graphql": "latest",
+    "graphql-tools": "^7.0.5",
+    "node-schedule": "^2.0.0",
+    "notarealdb": "^0.2.2"
+  }
+}

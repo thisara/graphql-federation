@@ -1,0 +1,16 @@
+{
+  "name": "products",
+  "type": "module",
+  "license": "MIT",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "@apollo/federation": "latest",
+    "apollo-server": "latest",
+    "graphql": "latest",
+    "notarealdb": "^0.2.2",
+    "@graphql-tools/load":"^6.2.8",
+    "@graphql-tools/graphql-file-loader":"^6.2.7"
+  }
+}
